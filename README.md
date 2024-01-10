@@ -5,11 +5,16 @@
 You can generate a workspace template using following commands.
 
 ```
-cargo generate --git https://github.com/Finschia/cw-workspace.git --name [workspace name]
+cargo generate \
+    --git https://github.com/Finschia/cw-workspace.git \
+    --name [workspace name]
 ```
 
-You can generate a contract template using following commands in workspace directory.
+You can generate a contract template using following commands in the workspace directory.
 
 ```
-cargo generate --git https://github.com/Finschia/cw-workspace.git contracts --destination ./contracts --name [contract name]
+cargo generate \
+    --git https://github.com/Finschia/cw-workspace.git contracts \
+    --destination ./contracts \
+    --name [contract name]
 ```
