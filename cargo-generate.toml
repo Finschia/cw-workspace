@@ -1,0 +1,10 @@
+[template]
+ignore = [ 
+  "contracts/cw-minimal-template",
+  "contracts/cw-sylvia-template",
+  "contracts/cw20-base",
+  "contracts/cw721-base",
+  "contracts/cargo-generate.toml",
+  "contracts/pre-script.rhai",
+]
+

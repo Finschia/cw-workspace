@@ -1,0 +1,21 @@
+[workspace]
+
+members = [
+  'contracts/*',
+]
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = true
+opt-level = 3
+overflow-checks = true
+panic = 'abort'
+rpath = false
+
+[patch.crates-io]
+cosmwasm-std = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
+cosmwasm-storage = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
+cosmwasm-schema = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
