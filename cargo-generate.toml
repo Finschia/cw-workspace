@@ -1,10 +1,9 @@
 [template]
-ignore = [ 
-  "contracts/cw-minimal-template",
-  "contracts/cw-sylvia-template",
-  "contracts/cw20-base",
-  "contracts/cw721-base",
-  "contracts/cargo-generate.toml",
-  "contracts/pre-script.rhai",
+ignore = [
+    "contracts/minimal",
+    "contracts/sylvia",
+    "contracts/cw20",
+    "contracts/cw721",
+    "contracts/cargo-generate.toml",
+    "contracts/pre-script.rhai",
 ]
-
