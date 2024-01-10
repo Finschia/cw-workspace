@@ -1,6 +1,6 @@
 # {{project-name}}
 
-## How to use
+## How To Use
 
 You can generate a workspace template using a following command.
 
