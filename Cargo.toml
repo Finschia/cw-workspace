@@ -17,5 +17,4 @@ rpath = false
 
 [patch.crates-io]
 cosmwasm-std = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
-cosmwasm-storage = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
 cosmwasm-schema = { git = "https://github.com/Finschia/cosmwasm", tag = "v1.1.9+0.8.1" }
