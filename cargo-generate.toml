@@ -5,5 +5,4 @@ ignore = [
     "contracts/cw20",
     "contracts/cw721",
     "contracts/cargo-generate.toml",
-    "contracts/pre-script.rhai",
 ]
