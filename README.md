@@ -2,7 +2,7 @@
 
 ## How to use
 
-You can generate a workspace template using following commands.
+You can generate a workspace template using a following commands.
 
 ```
 cargo generate \
@@ -10,7 +10,7 @@ cargo generate \
     --name [workspace name]
 ```
 
-You can generate a contract template using following commands in the workspace directory.
+You can generate a contract template using a following commands in the workspace directory.
 
 ```
 cargo generate \
