@@ -18,7 +18,7 @@ cargo generate \
     --destination $PWD/contracts
 ```
 
-## Contract Template Option
+## Contract Option
 
 - minimal - This is an empty contracts, see [original repository](https://github.com/osmosis-labs/cw-minimal-template/tree/2c05d77b0c8fd0f44cc5c35f971263bc4b8e6419). 
 - cw20 - This is a cw20-base contract, see [original repository](https://github.com/CosmWasm/cw-plus/tree/v1.1.2/contracts/cw20-base).
