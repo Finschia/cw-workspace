@@ -1,0 +1,7 @@
+[template]
+ignore = [
+    "contracts/minimal",
+    "contracts/cw20",
+    "contracts/cw721",
+    "contracts/cargo-generate.toml",
+]
