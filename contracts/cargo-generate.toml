@@ -1,2 +1,2 @@
 [template]
-sub_templates = ["minimal", "sylvia", "cw20", "cw721"]
+sub_templates = ["minimal", "cw20", "cw721"]
