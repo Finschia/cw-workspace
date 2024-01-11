@@ -4,13 +4,19 @@ This is a workspace to develop CosmWasm contracts for Finschia.
 
 ## How To Use
 
-You can generate a workspace template using a following command.
+Install [cargo-generate](https://github.com/ashleygwilliams/cargo-generate).
+
+```
+cargo install cargo-generate
+```
+
+Generate a workspace using a following command.
 
 ```
 cargo generate --git https://github.com/Finschia/cw-workspace.git
 ```
 
-You can generate a contract template using a following command in the workspace directory.
+Generate a contract template using a following command in the workspace directory.
 
 ```
 cargo generate \
