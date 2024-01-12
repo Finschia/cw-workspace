@@ -1,7 +1,7 @@
 [package]
-authors = ["Shogo Hyodo <mmoshg8u@gmail.com>"]
+authors = ["{{authors}}"]
 edition = "2021"
-name = "minimal"
+name = "{{project-name}}"
 version = "0.1.0"
 
 exclude = [
@@ -40,10 +40,8 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 """
 
 [dependencies]
-cosmwasm-schema = "1.5.0"
-cosmwasm-std = {version = "1.5.0", features = [
-  "cosmwasm_1_3", # "cosmwasm_1_4" # <- Enable this if you only deploy to chains that have CosmWasm 1.4 or higher
-]}
+cosmwasm-schema = { workspace = true }
+cosmwasm-std = { workspace = true }
 cw-storage-plus = "1.1.0"
 cw2 = "1.1.1"
 schemars = "0.8.15"
