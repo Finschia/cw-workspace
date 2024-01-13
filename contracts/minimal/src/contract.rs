@@ -7,7 +7,7 @@ use crate::error::ContractError;
 use crate::msg::{ExecuteMsg, InstantiateMsg, MigrateMsg, QueryMsg};
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:minimal";
+const CONTRACT_NAME: &str = "crates.io:{{project-name}}";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 /// Handling contract instantiation

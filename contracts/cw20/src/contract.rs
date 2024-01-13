@@ -25,7 +25,7 @@ use crate::state::{
 };
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:cw20-base";
+const CONTRACT_NAME: &str = "crates.io:{{project-name}}";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 const LOGO_SIZE_CAP: usize = 5 * 1024;
