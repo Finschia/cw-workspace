@@ -1,6 +1,6 @@
 use cosmwasm_schema::write_api;
 
-use minimal::msg::{ExecuteMsg, InstantiateMsg, MigrateMsg, QueryMsg};
+use {{crate_name}}::msg::{ExecuteMsg, InstantiateMsg, MigrateMsg, QueryMsg};
 
 fn main() {
     write_api! {
