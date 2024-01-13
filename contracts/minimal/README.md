@@ -1,1 +1,1 @@
-# minimal
+# {{project-name}}
