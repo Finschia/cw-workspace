@@ -1,8 +1,8 @@
 [package]
-name          = "{{project-name}}"
-authors       = ["{{authors}}"]
-version       = "0.1.0"
-edition       = "2021"
+name = "{{project-name}}"
+authors = ["{{authors}}"]
+version = "0.1.0"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -15,11 +15,11 @@ library = []
 
 [dependencies]
 cosmwasm-schema = { workspace = true }
-cosmwasm-std    = { workspace = true }
-cw-utils        = { workspace = true }
-cw2             = { workspace = true }
-cw721           = { workspace = true }
+cosmwasm-std = { workspace = true }
+cw-utils = { workspace = true }
+cw2 = { workspace = true }
+cw721 = { workspace = true }
 cw-storage-plus = { workspace = true }
-schemars        = "0.8.10"
-serde           = { version = "1.0.140", default-features = false, features = ["derive"] }
-thiserror       = "1.0.31"
+schemars = "0.8.10"
+serde = { version = "1.0.140", default-features = false, features = ["derive"] }
+thiserror = "1.0.31"
