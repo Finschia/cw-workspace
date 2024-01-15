@@ -5,11 +5,12 @@ use cosmwasm_std::{
     to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response, StdError, StdResult, Uint128,
 };
 
-use cw2::{ensure_from_older_version, set_contract_version};
+use cw2::set_contract_version;
 use cw20::{
     BalanceResponse, Cw20Coin, Cw20ReceiveMsg, DownloadLogoResponse, EmbeddedLogo, Logo, LogoInfo,
     MarketingInfoResponse, MinterResponse, TokenInfoResponse,
 };
+use cw_utils::ensure_from_older_version;
 
 use crate::allowances::{
     execute_burn_from, execute_decrease_allowance, execute_increase_allowance, execute_send_from,
@@ -24,7 +25,7 @@ use crate::state::{
 };
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:cw20-base";
+const CONTRACT_NAME: &str = "crates.io:{{project-name}}";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 const LOGO_SIZE_CAP: usize = 5 * 1024;
@@ -431,7 +432,7 @@ pub fn execute_update_marketing(
         .marketing
         .as_ref()
         .ok_or(ContractError::Unauthorized {})?
-        != info.sender
+        != &info.sender
     {
         return Err(ContractError::Unauthorized {});
     }
@@ -484,7 +485,7 @@ pub fn execute_upload_logo(
         .marketing
         .as_ref()
         .ok_or(ContractError::Unauthorized {})?
-        != info.sender
+        != &info.sender
     {
         return Err(ContractError::Unauthorized {});
     }
@@ -832,7 +833,8 @@ mod tests {
                 let err = query_download_logo(deps.as_ref()).unwrap_err();
                 assert!(
                     matches!(err, StdError::NotFound { .. }),
-                    "Expected StdError::NotFound, received {err}",
+                    "Expected StdError::NotFound, received {}",
+                    err
                 );
             }
 
@@ -860,7 +862,8 @@ mod tests {
                 let err = query_download_logo(deps.as_ref()).unwrap_err();
                 assert!(
                     matches!(err, StdError::NotFound { .. }),
-                    "Expected StdError::NotFound, received {err}",
+                    "Expected StdError::NotFound, received {}",
+                    err
                 );
             }
         }
@@ -1492,7 +1495,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1544,7 +1548,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1596,7 +1601,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1648,7 +1654,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1700,7 +1707,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1752,7 +1760,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1791,7 +1800,8 @@ mod tests {
 
             assert!(
                 matches!(err, ContractError::Std(_)),
-                "Expected Std error, received: {err}",
+                "Expected Std error, received: {}",
+                err
             );
 
             assert_eq!(
@@ -1807,7 +1817,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1859,7 +1870,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -1907,7 +1919,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -2057,7 +2070,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -2113,7 +2127,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -2162,7 +2177,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
 
@@ -2212,7 +2228,8 @@ mod tests {
             let err = query_download_logo(deps.as_ref()).unwrap_err();
             assert!(
                 matches!(err, StdError::NotFound { .. }),
-                "Expected StdError::NotFound, received {err}",
+                "Expected StdError::NotFound, received {}",
+                err
             );
         }
     }

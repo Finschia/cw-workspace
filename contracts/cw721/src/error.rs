@@ -1,17 +1,13 @@
 use cosmwasm_std::StdError;
-use cw_ownable::OwnershipError;
 use thiserror::Error;
 
 #[derive(Error, Debug, PartialEq)]
 pub enum ContractError {
-    #[error(transparent)]
+    #[error("{0}")]
     Std(#[from] StdError),
 
-    #[error(transparent)]
-    Ownership(#[from] OwnershipError),
-
-    #[error(transparent)]
-    Version(#[from] cw2::VersionError),
+    #[error("Unauthorized")]
+    Unauthorized {},
 
     #[error("token_id already claimed")]
     Claimed {},
