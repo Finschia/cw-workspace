@@ -2,13 +2,15 @@
 
 This is a workspace to develop CosmWasm contracts for Finschia.
 
+## Requirements
+
+- [cargo-generate](https://github.com/ashleygwilliams/cargo-generate)
+- rust v1.69.0
+
+> [!NOTE]
+> If you use the cw-gitpod environment, these tools are already installed.
+
 ## How To Use
-
-Install [cargo-generate](https://github.com/ashleygwilliams/cargo-generate).
-
-```
-cargo install cargo-generate
-```
 
 Generate a workspace using a following command.
 
