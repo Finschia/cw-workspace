@@ -8,7 +8,7 @@ This is a workspace to develop CosmWasm contracts for Finschia.
 - rust v1.69.0
 
 > [!NOTE]
-> If you use the cw-gitpod environment, these tools are already installed.
+> If you use the [cw-gitpod](https://github.com/Finschia/cw-gitpod.git) environment, these tools are already installed.
 
 ## How To Use
 
