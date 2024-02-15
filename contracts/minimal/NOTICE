@@ -1,5 +1,6 @@
+minimal
+Copyright 2019 Osmosis Foundation Ltd.
 Copyright 2024 Finschia Foundation
-Copyright {{ "now" | date: "%Y" }} {{authors}}
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
