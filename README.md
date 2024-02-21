@@ -33,7 +33,7 @@ Generate a contract template without workspace.
 ```
 cargo generate \
     --git https://github.com/Finschia/cw-workspace.git contracts \
-    --d workspace=false
+    -d workspace=false
 ```
 
 ## Contract Option
