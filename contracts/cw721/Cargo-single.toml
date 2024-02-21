@@ -14,12 +14,12 @@ backtraces = ["cosmwasm-std/backtraces"]
 library = []
 
 [dependencies]
-cosmwasm-schema = { workspace = true }
-cosmwasm-std = { workspace = true }
-cw-utils = { workspace = true }
-cw2 = { workspace = true }
-cw721 = { workspace = true }
-cw-storage-plus = { workspace = true }
+cosmwasm-schema = "=1.1.9"
+cosmwasm-std = "=1.1.9"
+cw-utils = "=1.0.1"
+cw2 = "=1.1.0"
+cw721 = "=0.16.0"
+cw-storage-plus = "=1.1.0"
 schemars = "0.8.10"
 serde = { version = "1.0.140", default-features = false, features = ["derive"] }
 thiserror = "1.0.31"
