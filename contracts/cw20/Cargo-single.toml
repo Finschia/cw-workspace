@@ -13,12 +13,12 @@ backtraces = ["cosmwasm-std/backtraces"]
 library = []
 
 [dependencies]
-cosmwasm-schema = { workspace = true }
-cosmwasm-std = { workspace = true }
-cw-utils = { workspace = true }
-cw2 = { workspace = true }
-cw20 = { workspace = true }
-cw-storage-plus = { workspace = true }
+cosmwasm-schema = "=1.1.9"
+cosmwasm-std = "=1.1.9"
+cw-utils = "=1.0.1"
+cw2 = "=1.1.0"
+cw20 = "=1.1.0"
+cw-storage-plus = "=1.1.0"
 schemars = "0.8.1"
 semver = "1"
 serde = { version = "1.0.103", default-features = false, features = ["derive"] }
